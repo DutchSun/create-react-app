@@ -17,16 +17,28 @@
       "react-app-rewired": "^2.1.6",
       "sass-loader": "^10.0.2",
       "style-loader": "^1.2.1",
-      "eslint": "^5.16.0",
-      "eslint-config-react-app": "^4.0.1",
-      "eslint-loader": "2.1.2",
-      "eslint-plugin-flowtype": "2.50.1",
-      "eslint-plugin-import": "2.16.0",
-      "eslint-plugin-jsx-a11y": "6.2.1",
-      "eslint-plugin-react": "7.12.4",
-      "eslint-plugin-react-hooks": "^1.5.0",
+      "eslint": "^7.10.0",
+      "eslint-plugin-react": "^7.21.2",
       "webpack": "^4.44.1",
-      "webpack-dev-server": "^3.11.0"
+      "webpack-dev-server": "^3.11.0",
+      "husky": "^4.3.0",
+      "lint-staged": "^10.4.0"
+    },
+    "scripts": {
+      "start": "react-app-rewired start",
+      "build": "react-app-rewired build",
+      "test": "react-app-rewired test"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "src/**/*.{jsx,js,tsx,ts}": [
+        "prettier --write",
+        "eslint --fix"
+      ]
     },
     "eslintConfig": {
       "extends": ["react-app", "react-app/jest"]
