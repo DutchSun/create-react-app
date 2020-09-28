@@ -1,14 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+	Redirect
+} from 'react-router-dom';
 import Home from '../pages/Home/index';
 
 const Routes = () => (
-    <Router>
-        <Switch>
-            <Route path="/home" component={Home} />
-            <Redirect from="*" to="/home" />
-        </Switch>
-    </Router>
-)
+	<Router>
+		<Switch>
+			<Route path="/home" component={Home} />
+			<Redirect from="*" to="/home" />
+		</Switch>
+	</Router>
+);
 
 export default Routes;

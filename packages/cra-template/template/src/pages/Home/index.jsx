@@ -1,7 +1,6 @@
 import React from 'react';
+import HarmonyCloud from '@/components/Harmonycloud';
 
-export default () => {
-	return (
-		<div>Home</div>
-	)
+export default function Home() {
+	return <HarmonyCloud />;
 }
