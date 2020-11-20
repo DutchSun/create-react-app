@@ -8,9 +8,8 @@ import reportWebVitals from './reportWebVitals';
 if (isInIcestark()) {
 	registerAppEnter(() => {
 		ReactDOM.render(
-			<React.StrictMode>
-				<App />
-			</React.StrictMode>, getMountNode()
+			<App />,
+			getMountNode()
 		);
 	});
 	registerAppLeave(() => {
@@ -18,9 +17,7 @@ if (isInIcestark()) {
 	});
 } else {
 	ReactDOM.render(
-		<React.StrictMode>
-			<App />
-		</React.StrictMode>,
+		<App />,
 		document.getElementById('root')
 	);
 }
