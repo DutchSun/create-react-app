@@ -3,16 +3,16 @@
 #### 可执行命令
 ```bash
 # 安装依赖
-$ npm install
+$ npm install/yarn install
 
 # 启动服务
-$ npm run start
+$ npm run start/yarn start
 
 # 单元测试
-$ npm run test
+$ npm run test/yarn test
 
 # 构建
-$ npm run build
+$ npm run build/yarn build
 ```
 
 #### Commit规范
@@ -30,3 +30,7 @@ $ npm run build
 # build:    构造工具的或者外部依赖的改动，例如webpack，npm
 # refactor: 代码重构时使用
 ```
+#### config-overrides【覆写webpack】
+- addWebpackExternals: 打包构建时忽略的依赖
+- addWebpackAlias    : 别名配置
+- addLessLoader      : less-loader配置，用于对antd的主题定制
